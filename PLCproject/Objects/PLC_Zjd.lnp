@@ -1,0 +1,28 @@
+--cpu Cortex-M3
+".\objects\main.o"
+".\objects\crc.o"
+".\objects\delay.o"
+".\objects\dog.o"
+".\objects\rcc.o"
+".\objects\usart.o"
+".\objects\v_timer.o"
+".\objects\stm32f10x_it.o"
+".\objects\system_stm32f10x.o"
+".\objects\usart_data_handle.o"
+".\objects\led.o"
+".\objects\cmd.o"
+".\objects\24c32.o"
+".\objects\am2320.o"
+".\objects\ds1307.o"
+".\objects\i2c.o"
+".\objects\i2c2.o"
+".\objects\timer.o"
+".\objects\misc.o"
+".\objects\stm32f10x_rcc.o"
+".\objects\stm32f10x_flash.o"
+".\objects\core_cm3.o"
+".\objects\startup_stm32f10x_hd.o"
+--library_type=microlib --strict --scatter ".\Objects\PLC_Zjd.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\PLC_Zjd.map" -o .\Objects\PLC_Zjd.axf
