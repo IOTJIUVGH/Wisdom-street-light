@@ -30,7 +30,7 @@ int main()
 //TIMER3_UP__NVIC_Init();	
 //IWDG_Init(4,1000); 
 	//printf("GO");
-	print("BB")；
+	print("BB");
 	init_i2c1();
 	en_24c32();//初始化EPPROM
 //write_byte(0x03fe,0xff);
