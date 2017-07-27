@@ -26,31 +26,31 @@ int main()
 	USART1_NVIC_Init();
 	USART2_NVIC_Init();
 	
-//TIM3_Int_Init(29999,7199);//ÑİÊ¾3Ãë
+//TIM3_Int_Init(29999,7199);//æ¼”ç¤º3ç§’
 //TIMER3_UP__NVIC_Init();	
 //IWDG_Init(4,1000); 
-	printf("GO");
+	//printf("GO");
 	
 	init_i2c1();
-	en_24c32();//³õÊ¼»¯EPPROM
+	en_24c32();//åˆå§‹åŒ–EPPROM
 //write_byte(0x03fe,0xff);
 //Delayms(10);
 //write_byte(0x03ff,0xff);
 //Uart2_PutChar('A');
 //write_byte(0x3fd,0x00);
 //Storage_MACAddr(g_MACAddr,240);
-	vtimer_SetTimer(VTIM0, 5000, En_GetEdit);//×¢²á¼¯ÖĞÆ÷
+	vtimer_SetTimer(VTIM0, 5000, En_GetEdit);//æ³¨å†Œé›†ä¸­å™¨
 	vtimer_SetTimer(VTIM3, 10000, En_SendDat);
 	
 	while(1)
 	{			
-		RegisterMasterDevice();//×¢²áÖ÷Éè±¸
+		RegisterMasterDevice();//æ³¨å†Œä¸»è®¾å¤‡
 		
-		RotationEquipment();//ÂÖÑµÖÕ¶ËÉè±¸ĞÄÌø
+		RotationEquipment();//è½®è®­ç»ˆç«¯è®¾å¤‡å¿ƒè·³
 			
-		Uart1RxDatahandle();//´®¿Ú1½ÓÊÕÊı¾İ´¦Àí
+		Uart1RxDatahandle();//ä¸²å£1æ¥æ”¶æ•°æ®å¤„ç†
 			
-		Uart2RxDatahandle();//´®¿Ú2½ÓÊÕÊı¾İ´¦Àí		
+		Uart2RxDatahandle();//ä¸²å£2æ¥æ”¶æ•°æ®å¤„ç†		
 	}
 }	
 
